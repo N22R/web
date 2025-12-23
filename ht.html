@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Книжки</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>📚 Список книжок</h2>
+
+  <div class="toolbar">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Пошук за назвою або автором"
+    >
+    <button onclick="searchBooks()">🔍 Пошук</button>
+    <button onclick="clearSearch()">🧹 Очистити</button>
+    <button onclick="sortByPrice()">📊 Сортувати за ціною</button>
+    <button onclick="toggleCreateForm()">➕ Додати книжку</button>
+  </div>
+
+  <div class="total-expense" id="totalExpenseDisplay">Загальна ціна: 0 грн</div>
+
+  <div id="bookList"></div>
+
+  <div id="editModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Редагувати книжку</h3>
+      <form id="editForm">
+        <input type="hidden" name="id">
+        <input type="text" name="title" required placeholder="Назва книжки">
+        <input type="text" name="author" required pattern="[А-Яа-яЁёЇїІіЄєҐґA-Za-z\s]+" title="Лише літери" placeholder="Автор">
+        <input type="number" name="pages" required min="1" placeholder="Кількість сторінок">
+        <input type="number" name="price" required min="1" placeholder="Ціна (грн)">
+        <button type="submit">💾 Зберегти</button>
+        <button type="button" onclick="closeEditModal()">❌ Закрити</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="createModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Створити нову книжку</h3>
+      <form id="createForm">
+        <input type="text" name="title" required placeholder="Назва книжки">
+        <input type="text" name="author" required pattern="[А-Яа-яЁёЇїІіЄєҐґA-Za-z\s]+" title="Лише літери" placeholder="Автор">
+        <input type="number" name="pages" required min="1" placeholder="Кількість сторінок">
+        <input type="number" name="price" required min="1" placeholder="Ціна (грн)">
+        <button type="submit">✅ Створити</button>
+        <button type="button" onclick="closeCreateModal()">❌ Закрити</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>View Page | Книжки</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Manage Books</h1>
+
+  <div class="controls">
+    <input type="text" id="searchInput" placeholder="Пошук за автором">
+    <button onclick="searchBooks()">Пошук</button>
+    <button onclick="sortBooks()">Сортувати за ціною</button>
+    <button onclick="countTotalPrice()">Загальна ціна</button>
+    <button onclick="showTitles()">Показати назви</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Назва</th>
+        <th>Автор</th>
+        <th>Сторінки</th>
+        <th>Ціна (грн)</th>
+      </tr>
+    </thead>
+    <tbody id="bookTableBody">
+    </tbody>
+  </table>
+
+  <script src="view.js"></script>
+</body>
+</html>

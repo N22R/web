@@ -1,0 +1,81 @@
+@keyframes logoFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.nav__logo {
+  opacity: 0;
+  animation: logoFadeIn 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+@keyframes slideInTitle {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header__title {
+  animation: slideInTitle 0.6s ease-out forwards;
+}
+
+@keyframes fadeInMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav__menu.active {
+  animation: fadeInMenu 0.3s ease forwards;
+}
+
+.header__btn,
+.nav__btn--login,
+.nav__btn--register,
+.nav__btn {
+  transition: transform 0.3s ease;
+}
+
+.header__btn:hover,
+.nav__btn--login:hover,
+.nav__btn--register:hover,
+.nav__btn:hover {
+  transform: scale(1.05);
+}
+
+.footer__icon {
+  transition: transform 0.3s ease;
+}
+
+.footer__icon:hover {
+  transform: scale(1.2);
+}
+
+.nav__toggle.active .nav__toggle-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .nav__toggle.active .nav__toggle-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav__toggle.active .nav__toggle-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+

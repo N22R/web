@@ -1,0 +1,27 @@
+.toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.toolbar input {
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  width: 200px;
+}
+
+.toolbar button {
+  background-color: #e100ff;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.toolbar button:hover {
+  background-color: #e100ff;
+}

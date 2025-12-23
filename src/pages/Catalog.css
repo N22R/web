@@ -1,0 +1,79 @@
+.book-grid {
+  display: flex;              
+  flex-wrap: wrap;            
+  gap: 20px;                  
+  justify-content: center;    
+}
+
+.book-card {
+  flex: 0 1 220px;          
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0 30px 0;
+}
+
+.toolbar input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  width: 240px;
+  outline: none;
+}
+
+.toolbar button {
+  background-color: #e100ff;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.toolbar button:hover {
+  background-color: #ff00dd;
+  transform: translateY(-2px);
+}
+
+.cart-actions button {
+  background-color: #ff00dd;  
+  border: none;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cart-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.cart-actions button {
+  background-color: #ff00dd;
+  border: none;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  min-width: 160px;
+  font-weight: 500;
+}
+
+.cart-actions button:hover {
+  background-color: #e100ff;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 10px rgba(255, 0, 221, 0.4);
+}
